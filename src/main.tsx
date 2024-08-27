@@ -1,12 +1,17 @@
 import { render } from 'preact'
+import { Learning } from './components/Learning'
 import './style.css'
 
 function App() {
   return (
-    <div class="mx-auto max-w-sm rounded-xl bg-slate-500 px-9 py-4">
-      <h1>Hello, World!</h1>
+    <div>
+      <Learning />
     </div>
   )
 }
 
-render(<App />, document.getElementById('app')!)
+// Ensure that the 'app' element exists before trying to render
+const appContainer = document.getElementById('root')
+if (appContainer) {
+  render(<App />, appContainer)
+}
