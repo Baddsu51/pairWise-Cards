@@ -24,12 +24,10 @@ function App() {
   }
   return (
     <div class="flex min-h-screen flex-col">
-      <div>
-        <TopBar currentPage={currentPage} />
-        <main class="flex grow items-center justify-center bg-blue-500">
-          <div class="relative w-full max-w-md">{renderPage()}</div>
-        </main>
-      </div>
+      <TopBar currentPage={currentPage} />
+      <main class="flex grow items-center justify-center bg-blue-500">
+        <div class="relative w-full max-w-md">{renderPage()}</div>
+      </main>
       <BottomBar setCurrentPage={setCurrentPage} />
     </div>
   )
