@@ -1,3 +1,9 @@
+import AddIcon from '../assets/add.svg'
+import EditIcon from '../assets/edit.svg'
+import FillingIcon from '../assets/filling.svg'
+import SwippingIcon from '../assets/swipping.svg'
+import TypingIcon from '../assets/typing.svg'
+
 export const ActionBar = () => {
   return (
     <div
@@ -7,7 +13,7 @@ export const ActionBar = () => {
       <div class="flex space-x-2.5">
         <div class="group relative flex size-6 items-center rounded-full p-1 transition-all duration-200 hover:bg-blue-200 hover:shadow-md active:bg-blue-300 active:shadow-inner">
           <img
-            src="src/assets/typing.svg"
+            src={TypingIcon}
             alt="typing icon"
             class="size-full transition-all duration-200 group-hover:scale-110"
           />
@@ -17,7 +23,7 @@ export const ActionBar = () => {
         </div>
         <div class="group relative flex size-6 items-center rounded-full p-1 transition-all duration-200 hover:bg-blue-200 hover:shadow-md active:bg-blue-300 active:shadow-inner">
           <img
-            src="src/assets/swipping.svg"
+            src={SwippingIcon}
             alt="swipping icon"
             class="size-full transition-all duration-200 group-hover:scale-110"
           />
@@ -27,7 +33,7 @@ export const ActionBar = () => {
         </div>
         <div class="group relative flex size-6 items-center rounded-full p-1 transition-all duration-200 hover:bg-blue-200 hover:shadow-md active:bg-blue-300 active:shadow-inner">
           <img
-            src="src/assets/filling.svg"
+            src={FillingIcon}
             alt="filling icon"
             class="size-full transition-all duration-200 group-hover:scale-110"
           />
@@ -39,7 +45,7 @@ export const ActionBar = () => {
       <div class="flex space-x-2.5">
         <div class="group relative flex size-[1.35rem] items-center rounded-full p-1 transition-all duration-200 hover:bg-blue-200 hover:shadow-md active:bg-blue-300 active:shadow-inner">
           <img
-            src="src/assets/edit.svg"
+            src={EditIcon}
             alt="edit icon"
             class="size-full transition-all duration-200 group-hover:scale-110"
           />
@@ -49,7 +55,7 @@ export const ActionBar = () => {
         </div>
         <div class="group relative flex size-[1.35rem] items-center rounded-full p-1 transition-all duration-200 hover:bg-blue-200 hover:shadow-md active:bg-blue-300 active:shadow-inner">
           <img
-            src="src/assets/add.svg"
+            src={AddIcon}
             alt="add icon"
             class="size-full transition-all duration-200 group-hover:scale-110"
           />

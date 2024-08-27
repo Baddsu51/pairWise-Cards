@@ -1,3 +1,6 @@
+import CollectionIcon from '../assets/collection.svg'
+import LearnIcon from '../assets/learn.svg'
+import ProgressIcon from '../assets/progress.svg'
 import { Lists } from './Lists'
 
 export function Learning() {
@@ -46,7 +49,7 @@ export function Learning() {
           >
             <div class="mb-1 size-8 rounded-full p-1.5 transition-all duration-200 group-hover:bg-blue-200 group-hover:shadow-md group-active:bg-blue-400 group-active:shadow-inner">
               <img
-                src="../assets/learn.svg"
+                src={LearnIcon}
                 alt="learning"
                 class="size-full transition-all duration-200 group-hover:scale-110"
               />
@@ -61,7 +64,7 @@ export function Learning() {
           >
             <div class="mb-1 size-8 rounded-full p-1.5 transition-all duration-200 group-hover:bg-blue-200 group-hover:shadow-md group-active:bg-blue-400 group-active:shadow-inner">
               <img
-                src="/collection.svg"
+                src={CollectionIcon}
                 alt="Collection"
                 class="size-full transition-all duration-200 group-hover:scale-110"
               />
@@ -76,7 +79,7 @@ export function Learning() {
           >
             <div class="mb-1 size-8 rounded-full p-1.5 transition-all duration-200 group-hover:bg-blue-200 group-hover:shadow-md group-active:bg-blue-400 group-active:shadow-inner">
               <img
-                src="../assets/progress.svg"
+                src={ProgressIcon}
                 alt="Progress"
                 class="size-full transition-all duration-200 group-hover:scale-110"
               />
