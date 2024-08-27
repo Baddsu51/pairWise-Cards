@@ -1,6 +1,6 @@
 import { JSX } from 'preact'
 import { useState } from 'preact/hooks'
-import { Card as CardType } from '../models/Card'
+import { Card as CardType } from '../../models/Card'
 import { ActionBar } from './ActionBar'
 
 interface Props {

@@ -1,8 +1,8 @@
-import AddIcon from '../assets/add.svg'
-import EditIcon from '../assets/edit.svg'
-import FillingIcon from '../assets/filling.svg'
-import SwippingIcon from '../assets/swipping.svg'
-import TypingIcon from '../assets/typing.svg'
+import AddIcon from '../../assets/add.svg'
+import EditIcon from '../../assets/edit.svg'
+import FillingIcon from '../../assets/filling.svg'
+import SwippingIcon from '../../assets/swipping.svg'
+import TypingIcon from '../../assets/typing.svg'
 
 export const ActionBar = () => {
   return (

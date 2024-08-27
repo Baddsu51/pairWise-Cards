@@ -1,8 +1,8 @@
 import { useLiveQuery } from 'dexie-react-hooks'
 import { render } from 'preact'
 import { useState } from 'preact/hooks'
-import { db } from '../models/db'
-import { List } from '../models/List'
+import { db } from '../../models/db'
+import { List } from '../../models/List'
 import { ChoiceList } from './ChoiceList'
 import { ListView } from './ListView'
 

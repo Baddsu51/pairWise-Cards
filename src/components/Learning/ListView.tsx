@@ -1,8 +1,8 @@
 import { useLiveQuery } from 'dexie-react-hooks'
 import { useState } from 'preact/hooks'
-import { Card as CardType } from '../models/Card'
-import { db } from '../models/db'
-import { List } from '../models/List'
+import { Card as CardType } from '../../models/Card'
+import { db } from '../../models/db'
+import { List } from '../../models/List'
 import { Card } from './Card'
 
 export function ListView({ list }: { list: List }) {
