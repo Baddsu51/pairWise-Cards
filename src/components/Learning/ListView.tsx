@@ -6,7 +6,6 @@ import { List } from '../../models/List'
 import { Card } from './Card'
 
 export function ListView({ list }: { list: List }) {
-  // TODO: utiliser useState ou regarder la doc de dexie-react-hooks
   console.log('list:', list, 'list.id:', list.id)
 
   const [allCards, setAllCards] = useState<CardType[]>([])
@@ -32,6 +31,7 @@ export function ListView({ list }: { list: List }) {
   }, [list.id])
 
   function onAnswer(card: CardType, isCorrect: boolean) {
+    /* Todo: a tester */
     if (isCorrect) {
       // on retire la question de la liste des questions à poser
       {

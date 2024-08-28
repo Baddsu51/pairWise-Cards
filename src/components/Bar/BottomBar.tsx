@@ -7,14 +7,26 @@ type Props = {
   setCurrentPage: (page: Page) => void
 }
 
-export function BottomBar(setCurrentPage: Props) {
-  console.log(setCurrentPage)
+export function BottomBar({ setCurrentPage }: Props) {
+  const handleClickLearning = () => {
+    setCurrentPage('learning')
+  }
+
+  const handleClickCollection = () => {
+    setCurrentPage('collection')
+  }
+
+  const handleClickProgress = () => {
+    setCurrentPage('progress')
+  }
+
   return (
     <footer class="flex h-20 w-full items-center justify-center bg-blue-300 transition-colors">
       <div id="footer-bar" class="flex space-x-10">
         <div
           id="div-learning"
           class="group flex cursor-pointer flex-col items-center"
+          onClick={handleClickLearning}
         >
           <div class="mb-1 size-8 rounded-full p-1.5 transition-all duration-200 group-hover:bg-blue-200 group-hover:shadow-md group-active:bg-blue-400 group-active:shadow-inner">
             <img
@@ -30,6 +42,7 @@ export function BottomBar(setCurrentPage: Props) {
         <div
           id="div-collection"
           class="group flex cursor-pointer flex-col items-center"
+          onClick={handleClickCollection}
         >
           <div class="mb-1 size-8 rounded-full p-1.5 transition-all duration-200 group-hover:bg-blue-200 group-hover:shadow-md group-active:bg-blue-400 group-active:shadow-inner">
             <img
@@ -45,6 +58,7 @@ export function BottomBar(setCurrentPage: Props) {
         <div
           id="div-progress"
           class="group flex cursor-pointer flex-col items-center"
+          onClick={handleClickProgress}
         >
           <div class="mb-1 size-8 rounded-full p-1.5 transition-all duration-200 group-hover:bg-blue-200 group-hover:shadow-md group-active:bg-blue-400 group-active:shadow-inner">
             <img

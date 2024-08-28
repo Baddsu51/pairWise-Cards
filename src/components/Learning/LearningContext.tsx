@@ -1,11 +1,12 @@
-// contexts/LearningContext.tsx
 import { createContext, FunctionComponent } from 'preact'
 import { useContext, useState } from 'preact/hooks'
+import { List } from '../../models/List'
 
 interface LearningContextType {
-  selectedDeck: string
-  setSelectedDeck: (value: string | ((prevState: string) => string)) => void
-  // Ajoutez d'autres états et fonctions si nécessaire
+  selectedList: List
+  setSelectedList: (value: List | ((prevState: List) => List)) => void
+  lists: List[]
+  setLists: (value: List[]) => void
 }
 
 export const LearningContext = createContext<LearningContextType | undefined>(
@@ -13,10 +14,13 @@ export const LearningContext = createContext<LearningContextType | undefined>(
 )
 
 export const LearningProvider: FunctionComponent = ({ children }) => {
-  const [selectedDeck, setSelectedDeck] = useState<string>('')
+  const [selectedList, setSelectedList] = useState<List>({} as List)
+  const [lists, setLists] = useState<List[]>([])
 
   return (
-    <LearningContext.Provider value={{ selectedDeck, setSelectedDeck }}>
+    <LearningContext.Provider
+      value={{ selectedList, setSelectedList, lists, setLists }}
+    >
       {children}
     </LearningContext.Provider>
   )
