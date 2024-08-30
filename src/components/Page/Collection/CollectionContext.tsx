@@ -1,6 +1,6 @@
 import { createContext, FunctionComponent } from 'preact'
 import { useContext, useState } from 'preact/hooks'
-import { List } from '../../models/List'
+import { List } from '../../../models/List'
 
 interface CollectionContextType {
   selectedList: List

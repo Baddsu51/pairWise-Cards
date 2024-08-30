@@ -1,8 +1,8 @@
 import { useLiveQuery } from 'dexie-react-hooks'
 import { useEffect, useState } from 'preact/hooks'
-import { Card } from '../../models/Card'
-import { db } from '../../models/db'
-import { List } from '../../models/List'
+import { Card } from '../../../models/Card'
+import { db } from '../../../models/db'
+import { List } from '../../../models/List'
 
 type Props = {
   list: List

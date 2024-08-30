@@ -1,6 +1,6 @@
 import { Page } from '../../main'
-import CollectionSelector from './CollectionSelector'
-import LearningSelector from './LearningSelector'
+import CollectionSelector from './Selector/Collection/CollectionSelector'
+import LearningSelector from './Selector/Learning/LearningSelector'
 
 type Props = {
   currentPage: Page

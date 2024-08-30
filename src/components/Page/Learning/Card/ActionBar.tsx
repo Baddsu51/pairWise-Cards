@@ -5,6 +5,8 @@ import SwippingIcon from '../../assets/swipping.svg'
 import TypingIcon from '../../assets/typing.svg'
 
 export const ActionBar = () => {
+  const handleEdit = () => {}
+
   return (
     <div
       id="bar"
@@ -43,7 +45,10 @@ export const ActionBar = () => {
         </div>
       </div>
       <div class="flex space-x-2.5">
-        <div class="group relative flex size-[1.35rem] items-center rounded-full p-1 transition-all duration-200 hover:bg-blue-200 hover:shadow-md active:bg-blue-300 active:shadow-inner">
+        <div
+          class="group relative flex size-[1.35rem] items-center rounded-full p-1 transition-all duration-200 hover:bg-blue-200 hover:shadow-md active:bg-blue-300 active:shadow-inner"
+          onClick={handleEdit}
+        >
           <img
             src={EditIcon}
             alt="edit icon"

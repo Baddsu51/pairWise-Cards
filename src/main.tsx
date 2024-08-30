@@ -1,15 +1,16 @@
 import { render } from 'preact'
 import { useState } from 'preact/hooks'
-import { BottomBar } from './components/Bar/BottomBar'
-import { TopBar } from './components/Bar/TopBar'
-import { CollectionProvider } from './components/Collection/CollectionContext'
-import { CollectionPage } from './components/Collection/CollectionPage'
-import { LearningProvider } from './components/Learning/LearningContext'
-import { LearningPage } from './components/Learning/LearningPage'
-import { ProgressPage } from './components/Progress/ProgressPage'
+import { BottomBar } from './components/BottomBar/BottomBar'
+import { Edition } from './components/Edition/Edition'
+import { CollectionProvider } from './components/Page/Collection/CollectionContext'
+import { CollectionPage } from './components/Page/Collection/CollectionPage'
+import { LearningProvider } from './components/Page/Learning/LearningContext'
+import { LearningPage } from './components/Page/Learning/LearningPage'
+import { ProgressPage } from './components/Page/Progress/ProgressPage'
+import { TopBar } from './components/TopBar/TopBar'
 import './style.css'
 
-export type Page = 'learning' | 'collection' | 'progress'
+export type Page = 'learning' | 'collection' | 'progress' | 'edition'
 
 function App() {
   const [currentPage, setCurrentPage] = useState<Page>('learning')
@@ -22,15 +23,17 @@ function App() {
         return <CollectionPage />
       case 'progress':
         return <ProgressPage />
+      case 'edition':
+        return <Edition />
     }
   }
   return (
     <LearningProvider>
       <CollectionProvider>
-        <div class="flex min-h-screen flex-col">
+        <div className="flex min-h-screen flex-col">
           <TopBar currentPage={currentPage} />
-          <main class="flex grow items-center justify-center bg-blue-500">
-            <div class="relative w-full max-w-md">{renderPage()}</div>
+          <main className="flex grow flex-col items-center justify-center bg-blue-500 pb-20">
+            <div className="w-full max-w-[95vw] p-6">{renderPage()}</div>
           </main>
           <BottomBar setCurrentPage={setCurrentPage} />
         </div>

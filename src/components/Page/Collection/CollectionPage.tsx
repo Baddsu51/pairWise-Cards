@@ -1,12 +1,13 @@
 import { useLiveQuery } from 'dexie-react-hooks'
 import { useEffect } from 'preact/hooks'
-import { db } from '../../models/db'
-import { useLearningContext } from './LearningContext'
-import { ListView } from './ListView'
+import { db } from '../../../models/db'
+import { CardsView } from './CardsView'
+import { useCollectionContext } from './CollectionContext'
 
-export function LearningPage() {
+export function CollectionPage() {
   const lists = useLiveQuery(() => db.lists.toArray())
-  const { selectedList, setLists, setSelectedList } = useLearningContext()
+
+  const { selectedList, setLists, setSelectedList } = useCollectionContext()
 
   useEffect(() => {
     if (lists) {
@@ -22,9 +23,9 @@ export function LearningPage() {
   return (
     <div>
       {selectedList ? (
-        <ListView list={selectedList} />
+        <CardsView list={selectedList} />
       ) : (
-        lists.length > 0 && <ListView list={lists[0]} />
+        lists.length > 0 && <CardsView list={{ id: 0, title: 'all' }} />
       )}
     </div>
   )

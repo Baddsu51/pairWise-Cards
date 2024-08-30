@@ -1,5 +1,5 @@
 import { FunctionComponent, useEffect } from 'preact/compat'
-import { useCollectionContext } from '../Collection/CollectionContext'
+import { useCollectionContext } from '../../../Page/Collection/CollectionContext'
 
 const CollectionSelector: FunctionComponent = () => {
   const { selectedList, setSelectedList, lists } = useCollectionContext()
